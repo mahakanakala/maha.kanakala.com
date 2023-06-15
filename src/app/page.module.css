@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'Commuter-Sans';
+  src: url('../../public/fonts/CommuterSans.otf') format('opentype');
+  /* Add other font formats if necessary (e.g., woff, woff2) */
+}
+
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url('../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  /* Add other font formats if necessary (e.g., woff, woff2) */
+}
+
+.container {
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.floatParentElement {
+  width: 50%;
+  float: left;
+}
+
+.floatChildElement {
+  float: right;
+  width: 50%;
+}
+
+.nameHeader {
+  font-family: 'Cormorant Garamound', serif;
+  color: black;
+  font-size: 24px;
+  position: relative;
+  margin-left: 0;
+}
+
+.nameSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+
+.nameCenter {
+  font-family: 'Cormorant-Garamond';
+  color: black;
+  font-size: 17em;
+  position: relative;
+  z-index: 1;
+  font-weight: regular;
+  text-align: center; /* Center align the text */
+}
+
+.nameCenter > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 150px; /* Set the desired width */
+  height: 100px; /* Set the desired height */
+  z-index: 0; /* Place the image behind the text */
+}
+
+.subtitle {
+  color: black;
+  font-size: 16px;
+  font-family: 'Cormorant Garamound', serif;
+  margin-right: 50px;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Align the navbar to the left */
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Align the items to the center */
+  padding: 1em;
+  z-index: 999; /* Ensure the navbar stays on top */
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1em; /* Adjust the margin as per your preference */
+  padding: 0em;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: black;
+  font-family: 'EB Garamound', serif;
+  font-size: 1.5em;
+  padding: 4.5em;
+}
+
+.active {
+  color: fuchsia;
+}
+
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.heroText {
+  font-size: 12em;
+  color: black;
+}
+
+.contentContainer {
+  padding-bottom: 4em; /* Adjust the value based on the navbar height */
+}
+
+.projectsTitle{
+  font-family: Cormorant-Garamond;
+  font-size: 3em;
+  margin: 0 auto;
+  padding:0.5em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.sectionLine{
+  border-top: .1em solid black;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 3fr .5fr;
+  grid-template-rows: .1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .sectionTitle { 
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: Cormorant-Garamond;
+    font-size: 1.5em;
+    padding:0.5em;
+    display: flex;
+    text-align: left;
+    padding-left: 1em;
+   }
+
+  .projectType { 
+    grid-area: 1 / 2 / 2 / 3; 
+    font-family: Helvetica;
+    padding: 0.5;
+    font-size: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectLanguages { 
+    grid-area: 1 / 3 / 2 / 4; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    padding: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectView { 
+    grid-area: 1 / 4 / 2 / 5; 
+    font-family: Cormorant-Garamond;
+    font-size: 1.5em;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    padding:0.5em;
+  }
+
+
+  .arrow { 
+    grid-area: 1 / 5 / 2 / 6; 
+    text-align:right;
+    justify-content: center;
+    display: flex;
+    padding: 1em;
+  }
