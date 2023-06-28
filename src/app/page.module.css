@@ -1,13 +1,11 @@
 @font-face {
   font-family: 'Commuter-Sans';
   src: url('../../public/fonts/CommuterSans.otf') format('opentype');
-  /* Add other font formats if necessary (e.g., woff, woff2) */
 }
 
 @font-face {
   font-family: 'Cormorant-Garamond';
   src: url('../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
-  /* Add other font formats if necessary (e.g., woff, woff2) */
 }
 
 .container {
@@ -72,38 +70,6 @@
   margin-right: 50px;
 }
 
-.navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0; /* Align the navbar to the left */
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center; /* Align the items to the center */
-  padding: 1em;
-  z-index: 999; /* Ensure the navbar stays on top */
-}
-
-.navList {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navItem {
-  margin-left: 1em; /* Adjust the margin as per your preference */
-  padding: 0em;
-}
-
-.navItem a {
-  text-decoration: none;
-  color: black;
-  font-family: 'EB Garamound', serif;
-  font-size: 1.5em;
-  padding: 4.5em;
-}
-
 .active {
   color: fuchsia;
 }
@@ -121,7 +87,7 @@
 }
 
 .contentContainer {
-  padding-bottom: 4em; /* Adjust the value based on the navbar height */
+  padding-bottom: 4em; 
 }
 
 .projectsTitle{
@@ -185,7 +151,6 @@
     justify-content: right;
     padding:0.5em;
   }
-
 
   .arrow { 
     grid-area: 1 / 5 / 2 / 6; 
