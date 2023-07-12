@@ -33,7 +33,7 @@ const NameAnimation = () => {
     return () => clearInterval(typingInterval);
   },);
 
-  return <input type="text" className={styles.nameCenter} value={inputValue} />;
+  return <input title='name' type="text" className={styles.nameCenter} value={inputValue} />;
 };
 
 export default NameAnimation;

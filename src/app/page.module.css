@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Commuter-Sans';
-  src: url('../../public/fonts/CommuterSans.otf') format('opentype');
+  src: url('../../public/fonts/CommutersSans-ExtraLight.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Cormorant-Garamond';
-  src: url('../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  src: url('../../public/fonts/CormorantGaramond-Light.ttf') format('truetype');
 }
 
-.container {
+.main {
   background-color: white;
 }
 
@@ -21,6 +21,7 @@
 .floatParentElement {
   width: 50%;
   float: left;
+  font-family: 'Playfair Display', serif;
 }
 
 .floatChildElement {
@@ -28,10 +29,15 @@
   width: 50%;
 }
 
+.bgImage {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .nameHeader {
-  font-family: 'Cormorant Garamound', serif;
+  font-family: 'EB Garamond', serif;
   color: black;
-  font-size: 24px;
+  font-size: 2em;
   position: relative;
   margin-left: 0;
 }
@@ -44,12 +50,11 @@
 }
 
 .nameCenter {
-  font-family: 'Cormorant-Garamond';
+  font-family: 'Commuter-Sans';
   color: black;
-  font-size: 17em;
+  font-size: 13em;
   position: relative;
   z-index: 1;
-  font-weight: regular;
   text-align: center; /* Center align the text */
 }
 
@@ -120,6 +125,7 @@
     display: flex;
     text-align: left;
     padding-left: 1em;
+    color:black;
    }
 
   .projectType { 
@@ -130,6 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color:black;
   }
 
   .projectLanguages { 
@@ -140,6 +147,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color:black;
   }
 
   .projectView { 
@@ -148,14 +156,31 @@
     font-size: 1.5em;
     display: flex;
     text-align: right;
-    justify-content: right;
+    justify-content: flex-end;
     padding:0.5em;
+    color:black;
   }
 
   .arrow { 
-    grid-area: 1 / 5 / 2 / 6; 
+    grid-area: 1 / 5 / 2 / 6;
     text-align:right;
     justify-content: center;
     display: flex;
     padding: 1em;
+  }
+
+  .projectsContainer {
+    z-index: 1;
+    
+  }
+
+  .githubIcon {
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5em;
+    color: black;
+    margin-right: 1em;
+    z-index: 1;
   }
