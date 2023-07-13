@@ -1,15 +1,17 @@
 @font-face {
-  font-family: 'Commuter-Sans';
-  src: url('../../public/fonts/CommutersSans-ExtraLight.ttf') format('opentype');
+  font-family: "Commuter-Sans";
+  src: url("../../public/fonts/CommutersSans-ExtraLight.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Cormorant-Garamond';
-  src: url('../../public/fonts/CormorantGaramond-Light.ttf') format('truetype');
+  font-family: "Cormorant-Garamond";
+  src: url("../../public/fonts/CormorantGaramond-Light.ttf") format("truetype");
 }
 
 .main {
   background-color: white;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
@@ -23,46 +25,61 @@
   right: 0;
 }
 
-.headerIntro{
-  font-family: 'Inter', sans-serif;
+.headerIntro {
+  font-family: "Inter", sans-serif;
   font-weight: 200;
   font-size: 2.5em;
-  padding: .5em;
-  
+  padding: 0.5em;
+}
+
+.nameSection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 1em black;
 }
 
 .openerName {
-  font-family: 'Cormorant-Garamond';
+  font-family: "Cormorant-Garamond";
   font-size: 4.7em;
   word-spacing: 100vw;
   padding-left: 3em;
   padding-top: 2em;
-  padding-bottom: .75em;
+  padding-bottom: 0.75em;
   text-align: center;
   width: 40%;
 }
 
 .nameHeader {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   color: black;
   font-size: 2em;
   position: relative;
   margin-left: 0;
 }
 
+.nameContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .nameCenter {
-  font-family: 'Commuter-Sans';
+  font-family: "Commuter-Sans";
   color: black;
   font-size: 27em;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: 1;
   text-align: center;
+  margin: 0 auto;
 }
 
 .subtitle {
   color: black;
   font-size: 16px;
-  font-family: 'Cormorant Garamound', serif;
+  font-family: "Cormorant Garamound", serif;
   margin-right: 50px;
 }
 
@@ -82,118 +99,164 @@
 }
 
 .contentContainer {
-  padding-bottom: 4em; 
+  padding-bottom: 4em;
 }
 
-.projectsTitle{
+.projectsTitle {
   font-family: Cormorant-Garamond;
   font-size: 3em;
   margin: 0 auto;
-  padding:0.5em;
+  padding: 0.5em;
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.sectionLine{
-  border-top: .1em solid black;
+.sectionLine {
+  border-top: 0.1em solid black;
 }
 
-.parent {
+.projectGrid {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 3fr .5fr;
-  grid-template-rows: .1fr;
+  grid-template-columns: 2.5fr 1fr 1fr 3fr 0.5fr;
+  grid-template-rows: 0.1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+
+.sectionTitle {
+  grid-area: 1 / 1 / 2 / 2;
+  font-family: Cormorant-Garamond;
+  font-size: 1.75em;
+  padding: 0.5em;
+  display: flex;
+  text-align: left;
+  padding-left: 1em;
+  color: black;
+}
+
+.projectType {
+  grid-area: 1 / 2 / 2 / 3;
+  font-family: Helvetica;
+  padding: 0.5;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.projectLanguages {
+  grid-area: 1 / 3 / 2 / 4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  padding: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.projectView {
+  grid-area: 1 / 4 / 2 / 5;
+  font-family: Cormorant-Garamond;
+  font-size: 1.75em;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+  padding: 0.5em;
+  color: black;
+}
+
+.arrow {
+  grid-area: 1 / 5 / 2 / 6;
+  text-align: right;
+  justify-content: center;
+  display: flex;
+  padding: 1em;
+}
+
+.projectsContainer {
+  z-index: 1;
+  padding-top: 4em;
+  width: 100%;
+}
+
+.githubIcon {
+  grid-area: 1 / 4 / 2 / 5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em;
+  color: black;
+  margin-right: 1em;
+  z-index: 1;
+}
+
+
+/* .projectImageContainer {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  margin: 0 auto;
+} */
+
+.videoContainer {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -47.5%;
+  left: 15%;
+}
+
+.videoContainer video {
+  width: 90%;
+  height:90%;
+  object-fit: cover;
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .headerIntro {
+    font-size: 1em;
+    font-weight: 300;
   }
-  
-  .sectionTitle { 
-    grid-area: 1 / 1 / 2 / 2;
-    font-family: Cormorant-Garamond;
+
+  .openerName {
+    width: 80%;
     font-size: 1.5em;
-    padding:0.5em;
-    display: flex;
-    text-align: left;
-    padding-left: 1em;
-    color:black;
-   }
-
-  .projectType { 
-    grid-area: 1 / 2 / 2 / 3; 
-    font-family: Helvetica;
-    padding: 0.5;
-    font-size: 0.75em;
-    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    color:black;
+    padding-bottom: 10em;
+    padding-top: 10em;
   }
 
-  .projectLanguages { 
-    grid-area: 1 / 3 / 2 / 4; 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75em;
-    padding: 0.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
+  .nameCenter {
+    font-size: 7em;
+    padding-top: 0em;
+    padding-bottom: 0.5em;
   }
 
-  .projectView { 
-    grid-area: 1 / 4 / 2 / 5; 
-    font-family: Cormorant-Garamond;
-    font-size: 1.5em;
-    display: flex;
-    text-align: right;
-    justify-content: flex-end;
-    padding:0.5em;
-    color:black;
+  .projectsTitle {
+    font-size: 2.3em;
   }
 
-  .arrow { 
-    grid-area: 1 / 5 / 2 / 6;
-    text-align:right;
-    justify-content: center;
-    display: flex;
-    padding: 1em;
+  .sectionTitle,
+  .projectView {
+    font-size: 1em;
   }
 
-  .projectsContainer {
-    z-index: 1;
-    padding-top: 4em;
-    
+  .projectType,
+  .projectLanguages {
+    font-size: 0.5em;
   }
+}
 
-  .githubIcon {
-    grid-area: 1 / 4 / 2 / 5;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.5em;
-    color: black;
-    margin-right: 1em;
-    z-index: 1;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 999;
-    cursor: pointer;
-  }
-  
-  .projectImageContainer {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    margin: 0 auto;
-  }
-  
+.projectImageContainer {
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 1em;
+}

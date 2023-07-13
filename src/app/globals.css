@@ -95,3 +95,13 @@ nav ul li a {
   padding: 0;
 }
 
+@media (max-width: 600px) {
+
+}
+
+/* @media only screen and (orientation:landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+} */

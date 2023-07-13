@@ -1,6 +1,8 @@
+'use client'
 import './globals.css'
 import Link from 'next/link';
-
+import RestrictRotation from './components/RestrictRotation';
+import Script from 'next/script'
 
 export default function RootLayout({
   children,
@@ -24,6 +26,16 @@ export default function RootLayout({
         <meta name="github:title" content="Maha Kanakala" />
         <meta name="github:description" content="Personal Website" />
         <meta name="github:image" content="link to an image that represents your website or brand" />
+        <meta name="github:url" content="maha-kanakala.vercel.app" />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </head>
       <body>{children}
         {/* <nav>
@@ -45,6 +57,7 @@ export default function RootLayout({
             </li> 
           </ul>
         </nav> */}
+        <RestrictRotation />
       </body>
     </html>
   )
