@@ -47,7 +47,7 @@ export default function ProjectsSection() {
             <div className={styles.projectLanguages}>{project.languages}</div>
             <div className={styles.githubIcon}>
               {project.github ? (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" >
+                <a title="github" href={project.github} target="_blank" rel="noopener noreferrer" >
                   <AiFillGithub />
                 </a>
               ) : null}
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
             <div className={styles.projectView}>VIEW PROJECT</div>
             
             <div className={styles.arrow}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a title='project' href={project.link} target="_blank" rel="noopener noreferrer">
                 <BsArrowUpRight />
               </a>
             </div>

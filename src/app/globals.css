@@ -47,5 +47,51 @@ nav ul li a {
   color: black;
   font-family: 'EB Garamond', serif;
   font-size: 1.5em;
-  padding: 4.5em;
+  padding-right: 4.5em;
+  padding-left: 4.5em;
 }
+
+.footerContainer {
+  color: black;
+  font-size: 1em;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.richTextContainer {
+  flex-basis: 50%;
+  padding: 1em;
+  text-align: left;
+}
+
+.footerTextYear {
+  font-size: 1em;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  text-align: right;
+  padding: 1em;
+}
+
+.footerTextName {
+  font-size: 3em;
+  text-align: right;
+  margin: 0 auto;
+  padding: 0;
+}
+
