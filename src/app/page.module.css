@@ -28,22 +28,15 @@
 .headerIntro {
   font-family: "Inter", sans-serif;
   font-weight: 200;
-  font-size: 2.5em;
+  font-size: 2.25em;
   padding: 0.5em;
-}
-
-.nameSection {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 1em black;
 }
 
 .openerName {
   font-family: "Cormorant-Garamond";
-  font-size: 4.7em;
+  font-size: 4.25em;
   padding-left: 3em;
-  padding-top: 2em;
+  padding-top: 1.25em;
   padding-bottom: 0.75em;
   text-align: center;
   width: 50%;
@@ -66,7 +59,7 @@
 .nameCenter {
   font-family: "Commuter-Sans";
   color: black;
-  font-size: 27em;
+  font-size: 23em;
   width: 100%;
   height: 100%;
   position: relative;
@@ -91,6 +84,7 @@
   align-items: center;
   height: 100vh;
   position: relative;
+  padding-bottom: 6em;
 }
 
 .heroText {
@@ -182,6 +176,7 @@
   padding-top: 4em;
   width: 100%;
   position: relative;
+  height: 100%;
 }
 
 .githubIcon {
@@ -194,7 +189,6 @@
   margin-right: 1em;
   z-index: 1;
 }
-
 
 /* .projectImageContainer {
   max-width: 100%;
@@ -251,8 +245,8 @@
     font-size: 1em;
   }
 
-  .arrow {
-  
+  .heroSection {
+    padding-bottom:0em;
   }
 
   .projectType,
@@ -260,7 +254,7 @@
     font-size: 0.5em;
   }
 
-  .projectsContainer{
+  .projectsContainer {
     padding-top: 1em;
   }
 }
@@ -270,4 +264,8 @@
   align-items: center;
   height: 200px;
   margin-top: 1em;
+}
+
+@media (max-width: 1700px){ /*desktop*/
+
 }

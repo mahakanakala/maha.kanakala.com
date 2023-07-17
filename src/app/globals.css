@@ -1,6 +1,5 @@
 html,
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -51,7 +50,7 @@ nav ul li a {
 .footerContainer {
   color: black;
   font-size: 1em;
-  height: 25vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,11 +67,11 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  padding: 0;
   margin: 0 auto;
 }
 
 .richTextContainer {
-  flex-basis: 50%;
   padding: 1em;
   text-align: left;
   position: relative;
@@ -95,9 +94,6 @@ nav ul li a {
   padding: 0;
 }
 
-@media (max-width: 600px) {
-
-}
 
 /* @media only screen and (orientation:landscape) {
   body {
