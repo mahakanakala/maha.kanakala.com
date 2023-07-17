@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Footer from './components/Footer'
 
 import ProjectsSection from './components/ProjectsSection';
 
@@ -55,16 +54,15 @@ export default function Home() {
             <div className={styles.nameContainer}>
               <h1 className={styles.nameCenter}> MAHA </h1>
             </div>
-            <div className={styles.videoContainer}>
+            {/* <div className={styles.videoContainer}>
               <video autoPlay muted loop >
                 <source src="/videos/0208d89b4b72440ca37722f78bf78e76.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
-            </div>
+            </div> */}
           </div>
         </section>
         <ProjectsSection />
-        <Footer />
       </div>
     </>
   );

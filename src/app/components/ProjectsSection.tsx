@@ -17,7 +17,7 @@ const projectsData = [
     title: 'WHATS IN YOUR SKINCARE?',
     type: 'WEB DEV',
     languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
-    link: 'https://toxins-web.vercel.app/',
+    link: 'https://whats-in-your-skincare.vercel.app/',
     github: 'https://github.com/mahakanakala/toxins-web',
     image: '/images/mandala.png',
   },
@@ -57,14 +57,14 @@ export default function ProjectsSection() {
             </div>
           </div>
           <hr className={styles.sectionLine} />
-          <div id='hiddenContainer' className={styles.projectImage}>
+          {/* <div id='hiddenContainer' className={styles.projectImage}>
             <Image
               src={project.image}
               width={100}
               height={100}
               alt='project picture'
             />
-          </div>
+          </div> */}
         </section>
       ))}
       <hr className={styles.sectionLine} />
