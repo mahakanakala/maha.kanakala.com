@@ -22,6 +22,14 @@ const projectsData = [
     image: '/images/mandala.png',
   },
   {
+    title: 'VSCO ANALYZER',
+    type: 'DATA SCIENCE',
+    languages: 'PYTHON',
+    link: 'https://github.com/mahakanakala/vsco_analyzer',
+    github: 'https://github.com/mahakanakala/vsco_analyzer',
+    image: '/images/mandala.png',
+  },
+  {
     title: 'WEBSITE TEMPLATE (CS LLC)',
     type: 'WEB DEV',
     languages: 'HTML, CSS',
@@ -56,7 +64,7 @@ export default function ProjectsSection() {
               </a>
             </div>
           </div>
-          <hr className={styles.sectionLine} />
+          {/* <hr className={styles.sectionLine} /> */}
           {/* <div id='hiddenContainer' className={styles.projectImage}>
             <Image
               src={project.image}
