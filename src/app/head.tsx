@@ -18,15 +18,18 @@ export default function Head() {
         <meta name="github:description" content="Personal Website" />
         <meta name="github:image" content="link to an image that represents your website or brand" />
         <meta name="github:url" content="maha-kanakala.vercel.app" />
+        <div>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
         </Script>
+        </div>
       </>
     )
   }
