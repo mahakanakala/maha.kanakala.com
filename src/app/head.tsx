@@ -19,17 +19,24 @@ export default function Head() {
         <meta name="github:image" content="link to an image that represents your website or brand" />
         <meta name="github:url" content="maha-kanakala.vercel.app" />
         <div>
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+        <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-WMXHY7QDNB`}
+      />
+          <Script
+              id="ga-script"
+              strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-WMXHY7QDNB', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
         </div>
+        
       </>
     )
   }

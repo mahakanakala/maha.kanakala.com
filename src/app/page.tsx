@@ -5,8 +5,6 @@ import styles from "./page.module.css";
 import ProjectsSection from './components/ProjectsSection';
 
 export default function Home() {
-  const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
   return (
     <>
       <Head/>
