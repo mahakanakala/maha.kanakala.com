@@ -30,6 +30,14 @@ const projectsData = [
     image: '/images/mandala.png',
   },
   {
+    title: 'GLOBAL TEMPERATURE TIME FORECASTING MODEL',
+    type: 'AI',
+    languages: 'PYTHON',
+    link: 'https://global-weather-forecaster.streamlit.app/',
+    github: 'https://github.com/mahakanakala/datathon23',
+    image: '/images/mandala.png',
+  },
+  {
     title: 'WEBSITE TEMPLATE (CS LLC)',
     type: 'WEB DEV',
     languages: 'HTML, CSS',
