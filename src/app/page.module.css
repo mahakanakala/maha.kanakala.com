@@ -271,3 +271,16 @@
 @media (max-width: 1700px){ /*desktop*/
 
 }
+
+.projectImage {
+  height: 100vh;
+  position:relative;
+  display: block;
+}
+
+.stickyBar {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #c0c0c0;
+  top:0;
+}

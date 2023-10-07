@@ -1,3 +1,5 @@
+"use client"
+import { useState, useEffect } from "react";
 import React from 'react';
 import styles from '../page.module.css';
 import { BsArrowUpRight } from 'react-icons/bs';
@@ -5,29 +7,29 @@ import { AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image'
 
 const projectsData = [
-  {
-    title: 'TOXINS IN SKINCARE',
-    type: 'DATA SCIENCE',
-    languages: 'PYTHON',
-    link: '',
-    github: 'https://github.com/mahakanakala/toxins-in-skincare',
-    image: '/images/mandala.png',
-  },
-  {
-    title: 'WHATS IN YOUR SKINCARE?',
-    type: 'WEB DEV',
-    languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
-    link: 'https://whats-in-your-skincare.vercel.app/',
-    github: 'https://github.com/mahakanakala/toxins-web',
-    image: '/images/mandala.png',
-  },
+  // {
+  //   title: 'TOXINS IN SKINCARE',
+  //   type: 'DATA SCIENCE',
+  //   languages: 'PYTHON',
+  //   link: '',
+  //   github: 'https://github.com/mahakanakala/toxins-in-skincare',
+  //   image: '/images/toxins_website_preview.gif',
+  // },
+  // {
+  //   title: 'WHATS IN YOUR SKINCARE?',
+  //   type: 'WEB DEV',
+  //   languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
+  //   link: 'https://whats-in-your-skincare.vercel.app/',
+  //   github: 'https://github.com/mahakanakala/toxins-web',
+  //   image: '/images/toxins_website_preview.gif',
+  // },
   {
     title: 'VSCO ANALYZER',
     type: 'DATA SCIENCE',
     languages: 'PYTHON',
     link: 'https://github.com/mahakanakala/vsco_analyzer',
     github: 'https://github.com/mahakanakala/vsco_analyzer',
-    image: '/images/mandala.png',
+    image: '/images/toxins_website_preview.gif',
   },
   {
     title: 'GLOBAL TEMPERATURE TIME FORECASTING MODEL',
@@ -35,7 +37,7 @@ const projectsData = [
     languages: 'PYTHON',
     link: 'https://global-weather-forecaster.streamlit.app/',
     github: 'https://github.com/mahakanakala/datathon23',
-    image: '/images/mandala.png',
+    image: '/images/toxins_website_preview.gif',
   },
   {
     title: 'WEBSITE TEMPLATE (CS LLC)',
@@ -43,7 +45,7 @@ const projectsData = [
     languages: 'HTML, CSS',
     link: 'https://mahakanakala.github.io/csllc-webtemplate/',
     github: 'https://github.com/mahakanakala/csllc-webtemplate',
-    image: '/images/mandala.png',
+    image: '/images/toxins_website_preview.gif',
   },
 ];
 
@@ -53,6 +55,7 @@ export default function ProjectsSection() {
       <h2 className={styles.projectsTitle}>PROJECTS</h2>
       {projectsData.map((project, index) => (
         <section key={index}>
+          <div className="stickyBar" id="start"> 
           <hr className={styles.sectionLine} />
           <div className={styles.projectGrid}>
             <div className={styles.sectionTitle}>{project.title}</div>
@@ -72,12 +75,12 @@ export default function ProjectsSection() {
               </a>
             </div>
           </div>
-          {/* <hr className={styles.sectionLine} /> */}
-          {/* <div id='hiddenContainer' className={styles.projectImage}>
+          {/* <hr className={styles.sectionLine} id="end"/> */}
+          </div>
+          {/* <div className={styles.projectImage}>
             <Image
               src={project.image}
-              width={100}
-              height={100}
+              fill={true}
               alt='project picture'
             />
           </div> */}
