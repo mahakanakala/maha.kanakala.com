@@ -7,22 +7,22 @@ import { AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image'
 
 const projectsData = [
-  // {
-  //   title: 'TOXINS IN SKINCARE',
-  //   type: 'DATA SCIENCE',
-  //   languages: 'PYTHON',
-  //   link: '',
-  //   github: 'https://github.com/mahakanakala/toxins-in-skincare',
-  //   image: '/images/toxins_website_preview.gif',
-  // },
-  // {
-  //   title: 'WHATS IN YOUR SKINCARE?',
-  //   type: 'WEB DEV',
-  //   languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
-  //   link: 'https://whats-in-your-skincare.vercel.app/',
-  //   github: 'https://github.com/mahakanakala/toxins-web',
-  //   image: '/images/toxins_website_preview.gif',
-  // },
+  {
+    title: 'TOXINS IN SKINCARE',
+    type: 'DATA SCIENCE',
+    languages: 'PYTHON',
+    link: '',
+    github: 'https://github.com/mahakanakala/toxins-in-skincare',
+    image: '/images/toxins_website_preview.gif',
+  },
+  {
+    title: 'SKINTELLIGENCE',
+    type: 'WEB DEV',
+    languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
+    link: 'https://whats-in-your-skincare.vercel.app/',
+    github: 'https://github.com/mahakanakala/skintelligence_website',
+    image: '/images/toxins_website_preview.gif',
+  },
   {
     title: 'VSCO ANALYZER',
     type: 'DATA SCIENCE',
@@ -40,7 +40,7 @@ const projectsData = [
     image: '/images/toxins_website_preview.gif',
   },
   {
-    title: 'WEBSITE TEMPLATE (CS LLC)',
+    title: 'PORTFOLIO TEMPLATE (CS LLC)',
     type: 'WEB DEV',
     languages: 'HTML, CSS',
     link: 'https://mahakanakala.github.io/csllc-webtemplate/',
