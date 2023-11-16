@@ -40,6 +40,14 @@ const projectsData = [
     image: '/images/toxins_website_preview.gif',
   },
   {
+    title: 'OCEAN POLLUTION MAP',
+    type: 'AI, DATA SCIENCE',
+    languages: 'PYTHON',
+    link: 'https://kelp-keep-the-oceans-safe.streamlit.app/',
+    github: 'https://github.com/mahakanakala/kelp-keep-the-oceans-safe',
+    image: '/images/toxins_website_preview.gif',
+  },
+  {
     title: 'PORTFOLIO TEMPLATE (CS LLC)',
     type: 'WEB DEV',
     languages: 'HTML, CSS',
@@ -77,13 +85,13 @@ export default function ProjectsSection() {
           </div>
           {/* <hr className={styles.sectionLine} id="end"/> */}
           </div>
-          {/* <div className={styles.projectImage}>
+          <div className={styles.projectImage}>
             <Image
               src={project.image}
               fill={true}
               alt='project picture'
             />
-          </div> */}
+          </div>
         </section>
       ))}
       <hr className={styles.sectionLine} />
