@@ -7,14 +7,14 @@ import { AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image'
 
 const projectsData = [
-  {
-    title: 'TOXINS IN SKINCARE',
-    type: 'DATA SCIENCE',
-    languages: 'PYTHON',
-    link: '',
-    github: 'https://github.com/mahakanakala/toxins-in-skincare',
-    image: '/images/projects/',
-  },
+  // {
+  //   title: 'TOXINS IN SKINCARE',
+  //   type: 'DATA SCIENCE',
+  //   languages: 'PYTHON',
+  //   link: '',
+  //   github: 'https://github.com/mahakanakala/toxins-in-skincare',
+  //   image: '/images/projects/',
+  // },
   {
     title: 'SKINTELLIGENCE',
     type: 'WEB DEV',
