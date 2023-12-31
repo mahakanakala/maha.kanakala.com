@@ -13,7 +13,7 @@ const projectsData = [
     languages: 'PYTHON',
     link: '',
     github: 'https://github.com/mahakanakala/toxins-in-skincare',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/',
   },
   {
     title: 'SKINTELLIGENCE',
@@ -21,7 +21,7 @@ const projectsData = [
     languages: 'JAVASCRIPT, TYPESCRIPT, CSS',
     link: 'https://whats-in-your-skincare.vercel.app/',
     github: 'https://github.com/mahakanakala/skintelligence_website',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/skincare_web_proj.png',
   },
   {
     title: 'VSCO ANALYZER',
@@ -29,7 +29,7 @@ const projectsData = [
     languages: 'PYTHON',
     link: 'https://github.com/mahakanakala/vsco_analyzer',
     github: 'https://github.com/mahakanakala/vsco_analyzer',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/',
   },
   {
     title: 'GLOBAL TEMPERATURE TIME FORECASTING MODEL',
@@ -37,7 +37,7 @@ const projectsData = [
     languages: 'PYTHON',
     link: 'https://global-weather-forecaster.streamlit.app/',
     github: 'https://github.com/mahakanakala/datathon23',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/temp_project.png',
   },
   {
     title: 'OCEAN POLLUTION MAP',
@@ -45,7 +45,7 @@ const projectsData = [
     languages: 'PYTHON',
     link: 'https://kelp-keep-the-oceans-safe.streamlit.app/',
     github: 'https://github.com/mahakanakala/kelp-keep-the-oceans-safe',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/njit_proj.png',
   },
   {
     title: 'PORTFOLIO TEMPLATE (CS LLC)',
@@ -53,11 +53,39 @@ const projectsData = [
     languages: 'HTML, CSS',
     link: 'https://mahakanakala.github.io/csllc-webtemplate/',
     github: 'https://github.com/mahakanakala/csllc-webtemplate',
-    image: '/images/toxins_website_preview.gif',
+    image: '/images/projects/template_proj.png',
   },
 ];
 
 export default function ProjectsSection() {
+  const [activeProject, setActiveProject] = useState<number | null>(null);
+
+  const handleProjectClick = (index: number) => {
+    setActiveProject((prevActive) => (prevActive === index ? null : index));
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const maxFillImage = document.querySelector('.projectImage') as HTMLElement | null;
+
+      if (maxFillImage) {
+        const maxFillImageBottom = maxFillImage.offsetTop + maxFillImage.offsetHeight;
+        const scrolledToBottom = window.scrollY + window.innerHeight >= maxFillImageBottom;
+
+        if (scrolledToBottom) {
+          setActiveProject(null);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+// export default function ProjectsSection() {
   return (
     <div className={styles.projectsContainer}>
       <h2 className={styles.projectsTitle}>PROJECTS</h2>
@@ -85,13 +113,13 @@ export default function ProjectsSection() {
           </div>
           {/* <hr className={styles.sectionLine} id="end"/> */}
           </div>
-          <div className={styles.projectImage}>
+          {/* <div className={styles.projectImage}>
             <Image
               src={project.image}
               fill={true}
               alt='project picture'
             />
-          </div>
+          </div> */}
         </section>
       ))}
       <hr className={styles.sectionLine} />

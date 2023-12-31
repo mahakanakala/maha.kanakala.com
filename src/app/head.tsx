@@ -3,7 +3,7 @@ import Script from 'next/script'
 export default function Head() {
     return (
       <>
-        <title>Maha | Portfolio</title>
+        <title>Maha Kanakala | Devfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Hi there! I'm Maha." />
         <link rel="icon" href="/fmagnifying-glass.svg" />
@@ -18,6 +18,7 @@ export default function Head() {
         <meta name="github:description" content="Personal Website" />
         <meta name="github:image" content="link to an image that represents your website or brand" />
         <meta name="github:url" content="maha-kanakala.vercel.app" />
+        <meta name="github"></meta>
         <div>
         <Script
         strategy="lazyOnload"

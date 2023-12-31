@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                             <p className="footerText">
                                 <span style={{ textDecoration: 'underline' }}>
                                     <a href="mailto:mlk224@scarletmail.rutgers.edu?subject=Portfolio" target="_self" className="footerLinkName">
-                                        MAHA.KANAKALA@GMAIL.COM
+                                        MLK224@RUTGERS.EDU
                                     </a>
                                 </span>
                             </p>
