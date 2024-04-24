@@ -6,24 +6,26 @@ const Footer: React.FC = () => {
         <footer className="footerContainer">
                     <div className="contentContainer">
                         <div className="richTextContainer">
-                            <p className="footerText">
+                            {/* <p className="footerText">
                                 <br className="footerText" />
                                 COMPUTER SCIENCE STUDENT AT RUTGERS
-                            </p>
+                            </p> */}
                             <p className="footerText">
                                 <span style={{ textDecoration: 'underline' }}>
-                                    <a href="mailto:mlk224@scarletmail.rutgers.edu?subject=Portfolio" target="_self" className="footerLinkName">
-                                        MLK224@RUTGERS.EDU
+                                    <a href="mailto:maha.kanakala@gmail.com?subject=Portfolio Inquiry" target="_self" className="footerLinkName">
+                                        maha.kanakala@gmail.com
                                     </a>
                                 </span>
                             </p>
                         </div>
-                        <div className="richTextContainer">
+                <div className="richTextContainer">
+                <br/>
                             <p className="footerTextYear">
-                              ©2023&nbsp;
+                              ©2024&nbsp;
                             </p>
                         </div>
-                        <div className="richTextContainer">
+                <div className="richTextContainer">
+                <br/>
                             <p className="footerTextSocial">
                                 {/* <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" className="footerLink">
                                     INSTAGRAM
@@ -37,8 +39,10 @@ const Footer: React.FC = () => {
                                     GITHUB
                                 </a>
                             </p>
-                        </div>
-                        <div className="richTextContainer">
+                </div>
+                
+                <div className="richTextContainer">
+                <br/>
                             <p className="footerTextName">
                                 <span style={{ textDecoration: 'underline' }}>
                                     <a href="/" target="_self" className="footerLinkName">

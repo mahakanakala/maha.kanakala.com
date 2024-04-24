@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Snell Roundhand";
+  src: url("../../public/fonts/SnellRoundhand.ttf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.main {
+    background-image: url('/images/AdobeStock_269203001.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+
+.main background-image {
+  filter:(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        )
+}
+
+/* CARD & ENVELOPE */
+.cardAndEnvelope{
+  padding-top: 2em;
+  margin: 0 auto;
+  border-bottom: 7em;
+}
+
+/* ENVELOPE */
+.envelopeContainer {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .envelope {
+    position: absolute;
+    padding-top: 24.9em;
+  }
+
+/* CARD */
+.card{
+  width: 55%;
+  position: relative;
+  background-color: #FFECF7;
+  align-self: right;
+  margin: 0% auto;
+  z-index: 1;
+  margin-right: 15%;
+  /* filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0)); */
+}
+
+.cardTextBottom, .cardTextTop {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-size: 1.4em;
+  padding: 2em;
+  margin:0;
+}
+
+.cardTextTop{
+  text-align: right;
+  /* padding-top: 2em; */
+  padding-right: 1em;
+  color: #902463;
+}
+
+.cardTextBottom{
+  text-align: left;
+  /* padding-bottom: 2em; */
+  padding-left: 1em;
+  color: #902463;
+}
+
+.cardTitle, .cardTitle2 {
+  font-family: Snell Roundhand;
+  font-weight: 100;
+  transform: rotate(-26.28deg);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #902463;
+}
+
+.cardTitle{
+  font-size: 16em;
+  margin-bottom: -.7em;
+  padding-top: 0.5em;
+  margin-left: -18%;
+}
+
+.cardTitle2 {
+  font-size: 10em;
+  padding-left: 2em;
+  margin-top: .6em;
+  padding-bottom: .5em;
+}
+
+/* DRESS CODE */
+.dressCodeContainer {
+  /* padding-top: 2em; */
+  padding: 2em;
+  margin: 0 auto;
+  width: 55%;
+  position: relative;
+  background-color: #FFECF7;
+  margin-right: 15%;
+}
+
+.dressCodeTitle {
+  font-family: Snell Roundhand;
+  font-weight: 100;
+  font-size: 3em;
+  text-align: center;
+  color:#902463;
+}
+
+.dressCodeCaption {
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  text-align: center;
+  color:#902463;
+}
+
+.dressCodeDescription {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  text-align: left;
+  color:#902463;
+}
+
+
+/* FORM */
+.formBox {
+  padding-top: 4em;
+}
+
+.formContainer {
+  width: 50%;
+  background-color: #FFECF7;
+  margin-right: -20%;
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formQuestions, .formInputs {
+  display: grid;
+  grid-auto-rows: auto;
+  padding: 2em;
+  font-size: 1.0em;
+  color: #902463;
+}
+
+.formInputs{
+  justify-items: end;
+}
+
+.formText {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+}
+
+.formBtn {
+  background-color: white;
+  color: black;
+  font-family: 'Playfair Display', serif;
+  border: none;
+  border-radius: 10%;
+  padding: .1em .4em;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  color:#902463;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.formBtn:hover {
+  border: 1px solid black;
+}
+
+.formBtn:active {
+  border: 1px solid black;
+}
+
+.formCheckbox {
+  display: none;
+}
+
+/* Create a new custom checkbox */
+.formCheckbox + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Create the box for the custom checkbox */
+.formCheckbox + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 10%;
+}
+
+/* Create the checkmark for the custom checkbox */
+.formCheckbox:checked + label:after {
+  content: "✔";
+  left: 9px;
+  top: 19px;
+  position: relative;
+  border: solid #902463;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.formNameInput {
+  width: 100%;
+  height: 1.5em;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background: white;
+  font-family: 'Playfair Display', serif;
+  padding: .3em;
+  border-radius: 6%;
+}

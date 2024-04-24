@@ -1,17 +1,18 @@
 'use client'
 import './globals.css'
 import RestrictRotation from './components/RestrictRotation';
-import Script from 'next/script'
+import { useRouter } from 'next/router';
+import { useLocation } from 'react-router-dom';
 import Footer from './components/Footer'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+  }) {
   return (
     <html lang="en">
-      <head/>
+      <head />
       <body>{children}
         {/* <nav>
           <ul>
@@ -33,7 +34,7 @@ export default function RootLayout({
           </ul>
         </nav> */}
         <RestrictRotation />
-        <Footer />
+        { <Footer />}
       </body>
     </html>
   )
