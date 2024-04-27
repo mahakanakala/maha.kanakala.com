@@ -1,9 +1,27 @@
-import React from "react";
+'use client'
+import React, {useEffect, useState} from "react";
 import styles from "../../app/bday.module.css";
 import Image from 'next/image'
 import RsvpForm from "../components/RSVPForm";
 
 export default function bdayInvite() {
+    const [guestName, setGuestName] = useState(""); // State to hold the guest name
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const nameParam = params.get('name');
+        if (nameParam) {
+            setGuestName(nameParam);
+        }
+    }, []);
+    // useEffect(() => {
+    //     const currentUrl = window.location.pathname.replace(/^\//, '') + window.location.search.replace(/^\?/, '');
+    //     const guestName = Object.keys(guestLinks).find(key => decodeURIComponent(guestLinks[key]) === currentUrl);
+    //     if (guestName) {
+    //         setGuestName(guestName);
+    //     }
+    // }, []);
+    
     return (
         <>
             <div className={styles.main}>
@@ -12,7 +30,10 @@ export default function bdayInvite() {
                         <Image alt="envelope" title="envelope" src='/images/envolope.svg' height={562.21} width={689.41} />
                     </div>
                     <div className={styles.card}>
-                        <h3 className={styles.cardTextTop}> You're invited to celebrate <br /> Maha’s </h3>
+                        <div className={styles.cardNameAndGreeting}>
+                        <h3 className={styles.cardName}> To: {guestName || "Guest"} </h3> {/* Display the guest name */}
+                            <h3 className={styles.cardTextTop}> You're invited to celebrate <br /> Maha’s </h3>
+                            </div>
                         <h1 className={styles.cardTitle}>Twenty </h1>
                         <h1 className={styles.cardTitle2}> One</h1>
                         <h3 className={styles.cardTextBottom}> Sunday, May 19 at 7PM <br />

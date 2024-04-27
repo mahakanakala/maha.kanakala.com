@@ -52,19 +52,28 @@
   /* filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0)); */
 }
 
-.cardTextBottom, .cardTextTop {
+.cardTextBottom, .cardTextTop, .cardName {
   font-family: "Playfair Display", serif;
   font-weight: 100;
   font-size: 1.4em;
   padding: 2em;
   margin:0;
 }
+.cardNameAndGreeting {
+  display: flex;
+  color: #902463;
+}
+
+.cardName{
+  flex: 1;
+  padding-left: 1em;
+}
 
 .cardTextTop{
   text-align: right;
-  /* padding-top: 2em; */
+  flex: 2;
   padding-right: 1em;
-  color: #902463;
+  /* padding-top: 2em; */
 }
 
 .cardTextBottom{
@@ -100,7 +109,6 @@
 
 /* DRESS CODE */
 .dressCodeContainer {
-  /* padding-top: 2em; */
   padding: 2em;
   margin: 0 auto;
   width: 55%;
@@ -113,6 +121,8 @@
   font-family: Snell Roundhand;
   font-weight: 100;
   font-size: 3em;
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
   text-align: center;
   color:#902463;
 }
@@ -130,7 +140,6 @@
   text-align: left;
   color:#902463;
 }
-
 
 /* FORM */
 .formBox {
@@ -164,7 +173,7 @@
   font-weight: 100;
 }
 
-.formBtn {
+.formBtn, .submitBtn {
   background-color: white;
   color: black;
   font-family: 'Playfair Display', serif;
@@ -180,11 +189,11 @@
   border: 1px solid transparent;
 }
 
-.formBtn:hover {
+.formBtn:hover, .formBtn:focus, .submitBtn:hover, .submitBtn:focus {
   border: 1px solid black;
 }
 
-.formBtn:active {
+.formBtn:active, .submitBtn:active {
   border: 1px solid black;
 }
 
@@ -233,4 +242,12 @@
   font-family: 'Playfair Display', serif;
   padding: .3em;
   border-radius: 6%;
+}
+
+.submitBtn {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
