@@ -1,8 +1,7 @@
-'use client'
 import React, { useState } from "react";
 import styles from '../bday.module.css';
 
-export default function Form() {
+const Form = () => {
     const [formData, setFormData] = useState<{
         rsvpResponse: string | null;
         plusOne: boolean;
@@ -31,7 +30,7 @@ export default function Form() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         if (!formData.rsvpResponse) {
@@ -39,21 +38,31 @@ export default function Form() {
             return;
         }
 
-        const dataToSave = {
+        const form = {
             ...formData,
             plusOneName: formData.plusOne ? formData.plusOneName : "",
         };
+        console.log('formData:', formData);
+        try {
+            const rawResponse = await fetch('/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(form)
+            });
+
+            if (rawResponse.ok) {
+                setIsSubmitted(true);
+            } else {
+                setErrorMessage("Failed to submit RSVP. Please try again.");
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setErrorMessage("Failed to submit RSVP. Please try again.");
+        }
         
-        console.log(dataToSave);
-        // Reset form after submission
-        setFormData({
-            rsvpResponse: null,
-            plusOne: false,
-            plusOneName: "",
-            guestName: ""
-        });
-        setErrorMessage("");
-        setIsSubmitted(true);
     };
 
     return (
@@ -87,3 +96,5 @@ export default function Form() {
         </form>
     );
 }
+
+export default Form;
