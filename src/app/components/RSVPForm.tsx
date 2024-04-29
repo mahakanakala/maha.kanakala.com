@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useRouter } from 'next/navigation';
 import styles from '../bday.module.css';
 
 const Form = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState<{
         rsvpResponse: string | null;
         plusOne: boolean;
@@ -58,6 +60,7 @@ const Form = () => {
 
             if (rawResponse.ok) {
                 setIsSubmitted(true);
+                router.push('/21-bday-success');
             } else {
                 setErrorMessage("Failed to submit RSVP. Please try again.");
             }

@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import { google } from 'googleapis';
 
 type FormSubmission = {
@@ -6,12 +5,15 @@ type FormSubmission = {
   plusOne: boolean;
   plusOneName: string;
   guestName: string;
+  timestamp: string;
 };
 
 export async function POST(req: Request) {
-
+  const timestamp = new Date();
+  const timestampEST = timestamp.toLocaleString("en-US", {timeZone: "America/New_York"});
   const { rsvpResponse, plusOne, plusOneName, guestName } = await req.json() as FormSubmission;
 
+  // let plusOneString = plusOne.toString().toUpperCase();
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -28,14 +30,14 @@ export async function POST(req: Request) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-    const range = 'Guests!B1:E1';
+    const range = 'Guests!H1:L1';
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[guestName, rsvpResponse || '', plusOne ? 'Yes' : 'No', plusOneName]],
+        values: [[guestName, rsvpResponse || '', plusOne ? 'TRUE' : 'FALSE', plusOneName, timestampEST]],
       },
     });
 

@@ -24,9 +24,11 @@
 
 /* CARD & ENVELOPE */
 .cardAndEnvelope{
+  /* max-width: -moz-fit-content;
+  max-width: fit-content; */
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 2em;
-  margin: 0 auto;
-  border-bottom: 7em;
 }
 
 /* ENVELOPE */
@@ -37,19 +39,19 @@
 
   .envelope {
     position: absolute;
-    padding-top: 24.9em;
+    padding-top: 30em;
   }
 
 /* CARD */
 .card{
-  width: 55%;
+  width: 45%;
   position: relative;
   background-color: #FFECF7;
   align-self: right;
   margin: 0% auto;
   z-index: 1;
   margin-right: 15%;
-  /* filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0)); */
+  height: 100%;
 }
 
 .cardTextBottom, .cardTextTop, .cardName {
@@ -94,21 +96,21 @@
 }
 
 .cardTitle{
-  font-size: 16em;
+  font-size: 13em;
   margin-bottom: -.7em;
   padding-top: 0.5em;
   margin-left: -18%;
 }
 
 .cardTitle2 {
-  font-size: 10em;
+  font-size: 7em;
   padding-left: 2em;
-  margin-top: .6em;
+  margin-top: .7em;
   padding-bottom: .5em;
 }
 
 /* DRESS CODE */
-.dressCodeContainer {
+.dressCodeContainer, .successContainer {
   padding: 2em;
   margin: 0 auto;
   width: 55%;
@@ -137,12 +139,14 @@
 .dressCodeDescription {
   font-family: "Playfair Display", serif;
   font-size: 1.2em;
+  font-weight: normal;
   text-align: left;
   color:#902463;
 }
 
 /* FORM */
 .formBox {
+  padding-top: 6em;
   padding-top: 4em;
 }
 
@@ -189,6 +193,11 @@
   border: 1px solid transparent;
 }
 
+.submitBtn {
+  align-items: center;
+  margin-top: 10px;
+}
+
 .formBtn:hover, .formBtn:focus, .submitBtn:hover, .submitBtn:focus {
   border: 1px solid black;
 }
@@ -201,7 +210,6 @@
   display: none;
 }
 
-/* Create a new custom checkbox */
 .formCheckbox + label {
   position: relative;
   padding-left: 35px;
@@ -209,7 +217,6 @@
   font-size: 1em;
 }
 
-/* Create the box for the custom checkbox */
 .formCheckbox + label:before {
   content: "";
   position: absolute;
@@ -222,7 +229,6 @@
   border-radius: 10%;
 }
 
-/* Create the checkmark for the custom checkbox */
 .formCheckbox:checked + label:after {
   content: "✔";
   left: 9px;
@@ -236,6 +242,7 @@
 .formNameInput {
   width: 100%;
   height: 1.5em;
+  margin-left: 2em;
   box-sizing: border-box;
   border: 1px solid black;
   background: white;
@@ -250,4 +257,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* SUCCESS PAGE */
+.successMain {
+  height: 60vw;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/AdobeStock_269203001.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  border:0;
+}
+
+.successContainer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-right: 18%;
+}
+
+.spotifyContainer {
+  border-radius: 12px;
 }

@@ -1,8 +1,7 @@
 'use client'
 import './globals.css'
 import RestrictRotation from './components/RestrictRotation';
-import { useRouter } from 'next/router';
-import { useLocation } from 'react-router-dom';
+import Script from 'next/script';
 import Footer from './components/Footer'
 
 export default function RootLayout({
