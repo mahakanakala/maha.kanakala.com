@@ -8,15 +8,9 @@ type FormSubmission = {
   guestName: string;
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method Not Allowed' });
-  }
+export async function POST(req: Request) {
 
-  const { rsvpResponse, plusOne, plusOneName, guestName } = req.body as FormSubmission;
+  const { rsvpResponse, plusOne, plusOneName, guestName } = await req.json() as FormSubmission;
 
   try {
     const auth = new google.auth.GoogleAuth({
@@ -34,7 +28,7 @@ export default async function handler(
     const sheets = google.sheets({ version: 'v4', auth });
 
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-    const range = 'B1:E1'; 
+    const range = 'Guests!B1:E1';
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId,
@@ -46,10 +40,9 @@ export default async function handler(
     });
 
     console.log('req.body:', req.body);
-
-    return res.status(201).json({ data: response.data });
+    return Response.json({ response });
   } catch (error) {
     console.error('Error:', error);
-    return res.status(500).json({ message: 'Internal Server Error' });
+    return Response.json({ "message": error });
   }
 }

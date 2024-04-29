@@ -37,9 +37,12 @@ const Form = () => {
             setErrorMessage("RSVP response is required");
             return;
         }
+        const params = new URLSearchParams(window.location.search);
+        const nameParam = params.get('name');
 
         const form = {
             ...formData,
+            guestName: nameParam,
             plusOneName: formData.plusOne ? formData.plusOneName : "",
         };
         console.log('formData:', formData);
@@ -62,7 +65,7 @@ const Form = () => {
             console.error('Error submitting form:', error);
             setErrorMessage("Failed to submit RSVP. Please try again.");
         }
-        
+
     };
 
     return (
@@ -84,7 +87,7 @@ const Form = () => {
                         <label htmlFor="plusOne"></label>
                         {formData.plusOne && (
                             <div>
-                                <input className={styles.formNameInput} title="name" type="text" name="guestName" value={formData.guestName} onChange={handleInputChange} />
+                                <input className={styles.formNameInput} title="name" type="text" name="plusOneName" value={formData.plusOneName} onChange={handleInputChange} />
                             </div>
                         )}
                     </div>
