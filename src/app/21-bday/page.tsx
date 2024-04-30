@@ -4,7 +4,7 @@ import styles from "../../app/bday.module.css";
 import Image from 'next/image'
 import RsvpForm from "../components/RSVPForm";
 
-export default function bdayInvite() {
+export default function BdayInvite() {
     const [guestName, setGuestName] = useState("");
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function bdayInvite() {
                     <div className={styles.card}>
                         <div className={styles.cardNameAndGreeting}>
                         <h3 className={styles.cardName}> To: {guestName || "Guest"} </h3> {/* Display the guest name */}
-                            <h3 className={styles.cardTextTop}> You're invited to celebrate <br /> Maha’s </h3>
+                            <h3 className={styles.cardTextTop}> You&#39;re invited to celebrate <br /> Maha&#39;s </h3>
                             </div>
                         <h1 className={styles.cardTitle}>Twenty </h1>
                         <h1 className={styles.cardTitle2}> One</h1>
