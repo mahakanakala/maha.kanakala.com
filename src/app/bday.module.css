@@ -120,7 +120,7 @@
   background-color: #FFECF7;
 }
 
-.dressCodeTitle {
+.dressCodeTitle, .sucessTitle {
   font-family: Snell Roundhand;
   font-weight: 100;
   font-size: 3em;
@@ -321,11 +321,7 @@
   }
 
   .envelope {
-    position: absolute;
-    bottom: -5px;
-    z-index: 0;
-    left: 20vw;
-    filter: brightness(0.95) saturate(1.5);
+    display: none;
   }
 
   .card {
@@ -378,4 +374,31 @@
     filter: brightness(0.95) saturate(1.5);
   }
 
+  .successMain {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #902463;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    word-break: break-word;
+    border: 0;
+  }
+
+  .successContainer {
+    position: relative;
+    padding-top: 0em;
+    width: 55%;
+  }
+
+  .sucessTitle{
+    line-height: 1.1;
+    font-size: 2em;
+  }
+
+  .spotifyContainer {
+    height: 152px
+  }
 }

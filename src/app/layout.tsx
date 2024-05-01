@@ -33,7 +33,7 @@ export default function RootLayout({
           </ul>
         </nav> */}
         <RestrictRotation />
-        { <Footer />}
+        {/* { <Footer />} */}
       </body>
     </html>
   )
