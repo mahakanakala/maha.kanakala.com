@@ -79,9 +79,9 @@ const Form = () => {
                 <div className={styles.formQuestions}>
                     <p className={styles.formText}>RSVP</p>
                     <div>
-                        <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('Yes')}>Yes</button>
-                        <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('No')}>No</button>
+                        <button className={`${styles.formBtn} ${styles.yesBtn}`} type="button" onClick={() => handleRsvpResponse('Yes')}>Yes</button>
                         <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('Maybe')}>Maybe</button>
+                        <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('No')}>No</button>
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@ const Form = () => {
                 {errorMessage && <p className={styles.error}>{errorMessage}</p>}
                 {isSubmitted && <p className={styles.success}>RSVP submitted!</p>}
             </div>
-        </form>
+        </form >
     );
 }
 

@@ -27,9 +27,9 @@ export default function BdayInvite() {
             <div className={styles.main}>
                 <div className={styles.contentContainer}>
                     <div className={styles.cardAndEnvelope}>
-                        {/* <div className={styles.envelope}>
+                        <div className={styles.envelope}>
                             <Image alt="envelope" title="envelope" src='/images/envolope.svg' height={562.21} width={689.41} />
-                        </div> */}
+                        </div>
                         <div className={styles.card}>
                             <div className={styles.cardNameAndGreeting}>
                                 <h3 className={styles.cardName}> To: {guestName || "Guest"} </h3> {/* Display the guest name */}

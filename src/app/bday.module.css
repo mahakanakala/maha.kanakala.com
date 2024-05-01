@@ -7,9 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .main {
-  background-image: url('/images/AdobeStock_269203001.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #902463;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -29,24 +27,27 @@
 
 }
 
-.cardAndEnvelope {}
-
-/* ENVELOPE */
-.envelopeContainer {
-  margin: 0 auto;
+.cardAndEnvelope {
   position: relative;
 }
 
+/* ENVELOPE */
+.envelopeContainer {}
+
 .envelope {
   position: absolute;
-  padding-top: 30em;
+  bottom: -5px;
+  z-index: 0;
+  left: 20vw;
+  filter: brightness(0.95) saturate(1.5);
 }
 
 /* CARD */
 .card {
   width: var(--card-width);
   background-color: #FFECF7;
-  z-index: 1;
+  z-index: 5;
+  position: relative;
 }
 
 .cardTextBottom,
@@ -88,7 +89,7 @@
 .cardTitle,
 .cardTitle2 {
   font-family: Snell Roundhand;
-  font-weight: 100;
+  font-weight: 300;
   transform: rotate(-26.28deg);
   display: flex;
   justify-content: center;
@@ -118,7 +119,7 @@
 .dressCodeContainer,
 .successContainer {
   margin: 2em 0;
-  width: var(--card-width);
+  width: 980px;
   background-color: #FFECF7;
 }
 
@@ -157,7 +158,7 @@
 /* FORM */
 .formBox {
   background-color: #FFECF7;
-  width: var(--card-width);
+  width: 980px;
 }
 
 .formContainer {
@@ -165,6 +166,8 @@
   margin-right: -20%;
   position: relative;
   margin: 0 auto;
+  margin-top: 2em;
+
 }
 
 /* .formQuestions,
@@ -188,7 +191,7 @@
 
 .formText {
   font-family: "Playfair Display", serif;
-  font-weight: 100;
+  font-weight: 300;
   color: #902463;
 }
 
@@ -212,6 +215,11 @@
 .submitBtn {
   align-items: center;
   margin-top: 10px;
+}
+
+.yesBtn {
+  padding-right: 3em;
+  padding-left: 3em;
 }
 
 .formBtn:hover,
@@ -285,9 +293,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/AdobeStock_269203001.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #902463;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
