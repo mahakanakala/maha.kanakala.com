@@ -1,4 +1,5 @@
 import { google } from 'googleapis';
+import { NextResponse } from "next/server";
 
 type FormSubmission = {
   rsvpResponse: string | null;
@@ -40,9 +41,9 @@ export async function POST(req: Request) {
     });
 
     console.log('req.body:', req.body);
-    return Response.json({ response });
+    return NextResponse.json({ response });
   } catch (error) {
     console.error('Error:', error);
-    return Response.json({ "message": error });
+    return NextResponse.json({ "message": error });
   }
 }
