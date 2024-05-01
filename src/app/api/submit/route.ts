@@ -13,7 +13,6 @@ export async function POST(req: Request) {
   const timestampEST = timestamp.toLocaleString("en-US", {timeZone: "America/New_York"});
   const { rsvpResponse, plusOne, plusOneName, guestName } = await req.json() as FormSubmission;
 
-  // let plusOneString = plusOne.toString().toUpperCase();
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -28,7 +27,6 @@ export async function POST(req: Request) {
     });
 
     const sheets = google.sheets({ version: 'v4', auth });
-
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
     const range = 'Guests!H1:L1';
 

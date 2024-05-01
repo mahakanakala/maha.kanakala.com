@@ -23,8 +23,6 @@
 .contentContainer {
   margin-left: var(--card-margin-left);
   padding: 3em 8vw;
-
-
 }
 
 .cardAndEnvelope {
@@ -32,10 +30,10 @@
 }
 
 /* ENVELOPE */
-.envelopeContainer {}
-
 .envelope {
   position: absolute;
+  height: 562.21px;
+  width: 689.41px;
   bottom: -5px;
   z-index: 0;
   left: 20vw;
@@ -116,8 +114,7 @@
 }
 
 /* DRESS CODE */
-.dressCodeContainer,
-.successContainer {
+.dressCodeContainer {
   margin: 2em 0;
   width: 980px;
   background-color: #FFECF7;
@@ -305,8 +302,80 @@
   padding-top: 2em;
   padding-bottom: 2em;
   margin-right: 18%;
+  padding: 2em;
+  margin: 0 auto;
+  width: 55%;
+  position: relative;
+  background-color: #FFECF7;
 }
 
 .spotifyContainer {
   border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .contentContainer{
+    margin-left: var(--card-margin-left);
+    padding: 1em 0vw;
+    padding-top: 4em;
+  }
+
+  .envelope {
+    position: absolute;
+    bottom: -5px;
+    z-index: 0;
+    left: 20vw;
+    filter: brightness(0.95) saturate(1.5);
+  }
+
+  .card {
+    width: 85%;
+    background-color: #FFECF7;
+    z-index: 5;
+    position: relative;
+  }
+
+  .cardTitle {
+    font-size: 6em;
+  }
+
+  .cardTitle2{
+    font-size: 4em;
+  }
+
+  .dressCodeContainer, .formBox {
+    width: 85%;
+  }
+
+  .formBox {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  .dressCodeTitle{
+    font-size: 1.5em;
+  }
+
+  .dressCodeCaption { 
+    font-size: .65em;
+  }
+
+  .dressCodeDescription {
+    font-size: .65em;
+  }
+
+  .yesBtn, .submitBtn {
+    padding: 0.35em 1em;
+  }
+
+  .envelope {
+    position: absolute;
+    height: 281.105;
+    width: 344.705;
+    bottom: -5px;
+    z-index: 0;
+    left: 10vw;
+    filter: brightness(0.95) saturate(1.5);
+  }
+
 }

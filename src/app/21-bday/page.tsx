@@ -14,13 +14,6 @@ export default function BdayInvite() {
             setGuestName(nameParam);
         }
     }, []);
-    // useEffect(() => {
-    //     const currentUrl = window.location.pathname.replace(/^\//, '') + window.location.search.replace(/^\?/, '');
-    //     const guestName = Object.keys(guestLinks).find(key => decodeURIComponent(guestLinks[key]) === currentUrl);
-    //     if (guestName) {
-    //         setGuestName(guestName);
-    //     }
-    // }, []);
 
     return (
         <>
@@ -28,7 +21,7 @@ export default function BdayInvite() {
                 <div className={styles.contentContainer}>
                     <div className={styles.cardAndEnvelope}>
                         <div className={styles.envelope}>
-                            <Image alt="envelope" title="envelope" src='/images/envolope.svg' height={562.21} width={689.41} />
+                            <Image alt="envelope" title="envelope" src='/images/envolope.svg' layout="fill" objectFit="contain"  />
                         </div>
                         <div className={styles.card}>
                             <div className={styles.cardNameAndGreeting}>
@@ -44,8 +37,8 @@ export default function BdayInvite() {
                     </div>
                     <div className={styles.dressCodeContainer}>
                         <h3 className={styles.dressCodeTitle}> Dress Code: Semi-Formal </h3>
-                        <p className={styles.dressCodeCaption}> <i>Elegant Evening Wear Pink, White, and Gold Attire Encouraged</i></p>
-                        <h4 className={styles.dressCodeDescription}> <b>For Her:</b> Glamorous Evening Attire Cocktail Dresses, or Chic Separates Complementary Colors: Blush, Ivory, Champagne, Gold <br />  <br />
+                        <p className={styles.dressCodeCaption}> <i>Elegant Evening Wear Pink, White, and Gold Attire</i></p>
+                        <h4 className={styles.dressCodeDescription}> <b>For Her:</b> Glamorous Evening Attire Cocktail Dresses, or Chic Separates. <br />  <br />
                             <b>For Him:</b> Semi-formal attire. Suits, tuxedos, and ties are not required.</h4>
                     </div>
                     <RsvpForm />
