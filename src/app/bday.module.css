@@ -3,89 +3,90 @@
   src: url("../../public/fonts/SnellRoundhand.ttf") format("opentype");
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .main {
-    background-image: url('/images/AdobeStock_269203001.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    word-break: break-word;
-  }
+  background-image: url('/images/AdobeStock_269203001.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  word-break: break-word;
+}
 
 .main background-image {
-  filter:(
-          rgba(0, 0, 0, 0.7), 
-          rgba(0, 0, 0, 0.7)
-        )
+  filter: (rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7))
 }
 
 /* CARD & ENVELOPE */
-.cardAndEnvelope{
-  /* max-width: -moz-fit-content;
-  max-width: fit-content; */
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2em;
+.contentContainer {
+  margin-left: var(--card-margin-left);
+  padding: 3em 8vw;
+
+
 }
+
+.cardAndEnvelope {}
 
 /* ENVELOPE */
 .envelopeContainer {
-    margin: 0 auto;
-    position: relative;
-  }
+  margin: 0 auto;
+  position: relative;
+}
 
-  .envelope {
-    position: absolute;
-    padding-top: 30em;
-  }
+.envelope {
+  position: absolute;
+  padding-top: 30em;
+}
 
 /* CARD */
-.card{
-  width: 45%;
-  position: relative;
+.card {
+  width: var(--card-width);
   background-color: #FFECF7;
-  align-self: right;
-  margin: 0% auto;
   z-index: 1;
-  margin-right: 15%;
-  height: 100%;
 }
 
-.cardTextBottom, .cardTextTop, .cardName {
+.cardTextBottom,
+.cardTextTop,
+.cardName {
   font-family: "Playfair Display", serif;
-  font-weight: 100;
-  font-size: 1.4em;
+  font-weight: 300;
+  font-size: 1em;
   padding: 2em;
-  margin:0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
+
 .cardNameAndGreeting {
   display: flex;
   color: #902463;
 }
 
-.cardName{
+.cardName {
   flex: 1;
   padding-left: 1em;
 }
 
-.cardTextTop{
+.cardTextTop {
   text-align: right;
   flex: 2;
   padding-right: 1em;
   /* padding-top: 2em; */
 }
 
-.cardTextBottom{
+.cardTextBottom {
   text-align: left;
   /* padding-bottom: 2em; */
   padding-left: 1em;
   color: #902463;
 }
 
-.cardTitle, .cardTitle2 {
+.cardTitle,
+.cardTitle2 {
   font-family: Snell Roundhand;
   font-weight: 100;
   transform: rotate(-26.28deg);
@@ -93,13 +94,17 @@
   justify-content: center;
   margin: 0 auto;
   color: #902463;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
-.cardTitle{
+.cardTitle {
   font-size: 13em;
   margin-bottom: -.7em;
   padding-top: 0.5em;
   margin-left: -18%;
+
 }
 
 .cardTitle2 {
@@ -110,74 +115,85 @@
 }
 
 /* DRESS CODE */
-.dressCodeContainer, .successContainer {
-  padding: 2em;
-  margin: 0 auto;
-  width: 55%;
-  position: relative;
+.dressCodeContainer,
+.successContainer {
+  margin: 2em 0;
+  width: var(--card-width);
   background-color: #FFECF7;
-  margin-right: 15%;
 }
 
 .dressCodeTitle {
   font-family: Snell Roundhand;
   font-weight: 100;
   font-size: 3em;
-  margin-block-start: 0.25em;
-  margin-block-end: 0.25em;
+  padding: 1em 16px 0 16px;
+  margin-bottom: 0;
+  line-height: 0.7em;
   text-align: center;
-  color:#902463;
+  color: #902463;
 }
 
 .dressCodeCaption {
   font-family: "Playfair Display", serif;
   font-size: 1em;
   text-align: center;
-  color:#902463;
+  font-weight: 300;
+  margin-top: 0.5em;
+  margin-bottom: 3em;
+  color: #902463;
 }
 
 .dressCodeDescription {
   font-family: "Playfair Display", serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: normal;
   text-align: left;
-  color:#902463;
+  color: #902463;
+  padding: 0 16px;
+  padding-bottom: 3em;
+  font-weight: 300;
 }
 
 /* FORM */
 .formBox {
-  padding-top: 6em;
-  padding-top: 4em;
+  background-color: #FFECF7;
+  width: var(--card-width);
 }
 
 .formContainer {
-  width: 50%;
   background-color: #FFECF7;
   margin-right: -20%;
   position: relative;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
-.formQuestions, .formInputs {
+/* .formQuestions,
+.formInputs {
   display: grid;
   grid-auto-rows: auto;
   padding: 2em;
   font-size: 1.0em;
   color: #902463;
+} */
+.formQuestions {
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.formInputs{
+.formInputs {
   justify-items: end;
 }
 
 .formText {
   font-family: "Playfair Display", serif;
   font-weight: 100;
+  color: #902463;
 }
 
-.formBtn, .submitBtn {
+.formBtn,
+.submitBtn {
   background-color: white;
   color: black;
   font-family: 'Playfair Display', serif;
@@ -186,11 +202,11 @@
   padding: .1em .4em;
   text-align: center;
   display: inline-block;
-  font-size: 1.3em;
-  color:#902463;
+  color: #902463;
   margin: 4px 2px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid #f1cbe2;
+  padding: 0.5em 1em;
 }
 
 .submitBtn {
@@ -198,11 +214,15 @@
   margin-top: 10px;
 }
 
-.formBtn:hover, .formBtn:focus, .submitBtn:hover, .submitBtn:focus {
+.formBtn:hover,
+.formBtn:focus,
+.submitBtn:hover,
+.submitBtn:focus {
   border: 1px solid black;
 }
 
-.formBtn:active, .submitBtn:active {
+.formBtn:active,
+.submitBtn:active {
   border: 1px solid black;
 }
 
@@ -210,14 +230,14 @@
   display: none;
 }
 
-.formCheckbox + label {
+.formCheckbox+label {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
   font-size: 1em;
 }
 
-.formCheckbox + label:before {
+.formCheckbox+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -229,7 +249,7 @@
   border-radius: 10%;
 }
 
-.formCheckbox:checked + label:after {
+.formCheckbox:checked+label:after {
   content: "✔";
   left: 9px;
   top: 19px;
@@ -262,7 +282,7 @@
 /* SUCCESS PAGE */
 .successMain {
   height: 60vw;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   background-image: url('/images/AdobeStock_269203001.jpeg');
@@ -272,7 +292,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   word-break: break-word;
-  border:0;
+  border: 0;
 }
 
 .successContainer {

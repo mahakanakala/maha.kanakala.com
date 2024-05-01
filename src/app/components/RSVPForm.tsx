@@ -73,18 +73,21 @@ const Form = () => {
 
     return (
         <form className={styles.formBox} onSubmit={handleSubmit}>
+            <h3 className={styles.dressCodeTitle}> Save the Date! </h3>
             <div className={styles.formContainer}>
+
                 <div className={styles.formQuestions}>
-                    <h3 className={styles.formText}>RSVP</h3>
-                    <h3 className={styles.formText}>Plus One</h3>
-                    {formData.plusOne ? <h3 className={styles.formText}>Name</h3> : null}
-                </div>
-                <div className={styles.formInputs}>
+                    <p className={styles.formText}>RSVP</p>
                     <div>
                         <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('Yes')}>Yes</button>
                         <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('No')}>No</button>
                         <button className={styles.formBtn} type="button" onClick={() => handleRsvpResponse('Maybe')}>Maybe</button>
                     </div>
+                </div>
+
+                <div className={styles.formQuestions}>
+                    <p className={styles.formText}>Plus One</p>
+                    {formData.plusOne ? <p className={styles.formText}>Name</p> : null}
                     <div>
                         <input className={styles.formCheckbox} title="plus one" type="checkbox" checked={formData.plusOne} onChange={handleCheckboxChange} id="plusOne" name="plusOne" />
                         <label htmlFor="plusOne"></label>
@@ -95,6 +98,7 @@ const Form = () => {
                         )}
                     </div>
                 </div>
+
                 <button className={styles.submitBtn} type="submit">Submit</button>
                 {errorMessage && <p className={styles.error}>{errorMessage}</p>}
                 {isSubmitted && <p className={styles.success}>RSVP submitted!</p>}

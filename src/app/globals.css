@@ -4,6 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+  --card-width: 620px;
+  --card-margin-left: 15vw;
 }
 
 a {
@@ -97,7 +99,7 @@ nav ul li a {
   padding-top: 0.5em;
 }
 
-.footerLinkName{
+.footerLinkName {
   text-align: left;
   margin: 0 auto;
   padding-top: 0.5em;
@@ -117,14 +119,17 @@ nav ul li a {
     max-width: 90%;
     padding-top: 2em;
   }
+
   .richTextContainer {
     padding: 0.05em;
     flex-basis: 0%;
     min-width: 100%;
   }
+
   .footerTextName {
     font-size: 1em;
   }
+
   .footerText {
     font-size: 1em;
   }
