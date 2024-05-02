@@ -6,12 +6,10 @@ const Form = () => {
     const router = useRouter();
     const [formData, setFormData] = useState<{
         rsvpResponse: string | null;
-        plusOne: boolean;
         plusOneName: string;
         guestName: string;
     }>({
         rsvpResponse: null,
-        plusOne: false,
         plusOneName: "",
         guestName: ""
     });
@@ -23,9 +21,6 @@ const Form = () => {
         setFormData({ ...formData, rsvpResponse: response });
     };
 
-    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, plusOne: event.target.checked });
-    };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -45,7 +40,7 @@ const Form = () => {
         const form = {
             ...formData,
             guestName: nameParam,
-            plusOneName: formData.plusOne ? formData.plusOneName : "",
+            plusOneName: formData.plusOneName,
         };
         console.log('formData:', formData);
         try {
@@ -74,35 +69,29 @@ const Form = () => {
     return (
         <form className={styles.formBox} onSubmit={handleSubmit}>
             <h3 className={styles.dressCodeTitle}> Save the Date! </h3>
+            <p className={styles.dressCodeCaption}> <i>Kindly Respond by May 10th</i></p>
             <div className={styles.formContainer}>
 
                 <div className={styles.formQuestions}>
                     <p className={styles.formText}>RSVP</p>
                     <div>
-                        <button className={`${styles.formBtn} ${styles.yesBtn}`} type="button" onClick={() => handleRsvpResponse('Yes')}>Yes</button>
-                        <button className={`${styles.formBtn} ${styles.yesBtn}`} type="button" onClick={() => handleRsvpResponse('Maybe')}>Maybe</button>
-                        <button className={`${styles.formBtn} ${styles.yesBtn}`} type="button" onClick={() => handleRsvpResponse('No')}>No</button>
+                        <button className={`${styles.formBtn} ${styles.yesBtn} ${formData.rsvpResponse === "Yes" ? styles.selectedBtn : ""}`} type="button" onClick={() => handleRsvpResponse('Yes')}>Yes</button>
+                        <button className={`${styles.formBtn} ${formData.rsvpResponse === "Maybe" ? styles.selectedBtn : ""} `} type="button" onClick={() => handleRsvpResponse('Maybe')}>Maybe</button>
+                        <button className={`${styles.formBtn} ${formData.rsvpResponse === "No" ? styles.selectedBtn : ""} `} type="button" onClick={() => handleRsvpResponse('No')}>No</button>
                     </div>
                 </div>
 
                 <div className={styles.formQuestions}>
                     <p className={styles.formText}>Plus One</p>
-                    {formData.plusOne ? <p className={styles.formText}>Name</p> : null}
-                    <div>
-                        <input className={styles.formCheckbox} title="plus one" type="checkbox" checked={formData.plusOne} onChange={handleCheckboxChange} id="plusOne" name="plusOne" />
-                        <label htmlFor="plusOne"></label>
-                        {formData.plusOne && (
-                            <div>
-                                <input className={styles.formNameInput} title="name" type="text" name="plusOneName" value={formData.plusOneName} onChange={handleInputChange} />
-                            </div>
-                        )}
-                    </div>
+                    <input className={`${styles.formBtn} ${styles.formNameInput}`} title="name" type="text" name="plusOneName" placeholder="Your plus one's name" value={formData.plusOneName} onChange={handleInputChange} />
                 </div>
-
-                <button className={styles.submitBtn} type="submit">Submit</button>
-                {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-                {isSubmitted && <p className={styles.success}>RSVP submitted!</p>}
             </div>
+
+            <div className={styles.submitContainer}>
+                <button className={styles.submitBtn} type="submit">Submit</button>
+            </div>
+            {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+            {isSubmitted && <p className={styles.success}>RSVP submitted!</p>}
         </form >
     );
 }

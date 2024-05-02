@@ -27,17 +27,19 @@
 
 .cardAndEnvelope {
   position: relative;
+  width: min-content;
 }
 
 /* ENVELOPE */
 .envelope {
   position: absolute;
-  height: 562.21px;
-  width: 689.41px;
-  bottom: -5px;
+  height: 322.21px;
+  width: 391px;
+  bottom: 310px;
   z-index: 0;
-  left: 20vw;
+  right: -310px;
   filter: brightness(0.95) saturate(1.5);
+  transform: rotate(-30deg) scale(1.3);
 }
 
 /* CARD */
@@ -46,6 +48,7 @@
   background-color: #FFECF7;
   z-index: 5;
   position: relative;
+  filter: drop-shadow(20px 30px 44px #902463);
 }
 
 .cardTextBottom,
@@ -120,7 +123,15 @@
   background-color: #FFECF7;
 }
 
-.dressCodeTitle, .sucessTitle {
+.dressCodeContainer,
+.card,
+.formBox,
+.formContainer {
+  border-radius: 10px;
+}
+
+.dressCodeTitle,
+.sucessTitle {
   font-family: Snell Roundhand;
   font-weight: 100;
   font-size: 3em;
@@ -152,6 +163,12 @@
   font-weight: 300;
 }
 
+.forHer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: right;
+}
+
 /* FORM */
 .formBox {
   background-color: #FFECF7;
@@ -166,6 +183,8 @@
   margin-top: 2em;
 
 }
+
+
 
 /* .formQuestions,
 .formInputs {
@@ -198,7 +217,7 @@
   color: black;
   font-family: 'Playfair Display', serif;
   border: none;
-  border-radius: 10%;
+  border-radius: 10px;
   padding: .1em .4em;
   text-align: center;
   display: inline-block;
@@ -207,6 +226,16 @@
   cursor: pointer;
   border: 1px solid #f1cbe2;
   padding: 0.5em 1em;
+}
+
+.formBtn:hover,
+.submitBtn:hover {
+  border: 1px solid #902463 !important;
+}
+
+.selectedBtn {
+  border: 1px solid #902463 !important;
+  background-color: #f1cee2;
 }
 
 .submitBtn {
@@ -264,23 +293,24 @@
 }
 
 .formNameInput {
-  width: 85%;
-  height: 1.5em;
-  margin-left: 2em;
-  box-sizing: border-box;
-  border: 1px solid black;
-  background: white;
-  font-family: 'Playfair Display', serif;
-  padding: .3em;
-  border-radius: 6%;
+  width: 21%;
+  text-align: left;
+  cursor: unset;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  margin-top: 3em;
+
 }
 
 .submitBtn {
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 12%;
+  background: #902463;
+  color: #ffecf7;
+  border: none;
 }
 
 /* SUCCESS PAGE */
@@ -313,7 +343,7 @@
 }
 
 @media (max-width: 600px) {
-  .contentContainer{
+  .contentContainer {
     margin-left: var(--card-margin-left);
     padding: 0em 0vw;
     padding-top: 2em;
@@ -335,11 +365,18 @@
     font-size: 6em;
   }
 
-  .cardTitle2{
+  .cardAndEnvelope {
+    width: unset;
+  }
+  .cardTitle2 {
     font-size: 4em;
   }
-
-  .dressCodeContainer, .formBox {
+  .submitBtn{
+    width: 100%;
+  }
+  
+  .dressCodeContainer,
+  .formBox {
     width: 85%;
   }
 
@@ -356,8 +393,8 @@
     font-size: .7em;
   }
 
-  .formCheckbox{
-    float:right;
+  .formCheckbox {
+    float: right;
   }
 
   .formNameInput {
@@ -365,11 +402,11 @@
     float: right;
   }
 
-  .dressCodeTitle{
+  .dressCodeTitle {
     font-size: 1.5em;
   }
 
-  .dressCodeCaption { 
+  .dressCodeCaption {
     font-size: .65em;
   }
 
@@ -377,7 +414,8 @@
     font-size: .65em;
   }
 
-  .yesBtn, .submitBtn {
+  .yesBtn,
+  .submitBtn {
     padding: 0.35em 1em;
   }
 
@@ -412,7 +450,7 @@
     width: 55%;
   }
 
-  .sucessTitle{
+  .sucessTitle {
     line-height: 1.1;
     font-size: 2em;
   }

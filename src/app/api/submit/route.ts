@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 type FormSubmission = {
   rsvpResponse: string | null;
-  plusOne: boolean;
   plusOneName: string;
   guestName: string;
   timestamp: string;
@@ -11,8 +10,8 @@ type FormSubmission = {
 
 export async function POST(req: Request) {
   const timestamp = new Date();
-  const timestampEST = timestamp.toLocaleString("en-US", {timeZone: "America/New_York"});
-  const { rsvpResponse, plusOne, plusOneName, guestName } = await req.json() as FormSubmission;
+  const timestampEST = timestamp.toLocaleString("en-US", { timeZone: "America/New_York" });
+  const { rsvpResponse, plusOneName, guestName } = await req.json() as FormSubmission;
 
   try {
     const auth = new google.auth.GoogleAuth({
@@ -36,7 +35,7 @@ export async function POST(req: Request) {
       range,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[guestName, rsvpResponse || '', plusOne ? 'TRUE' : 'FALSE', plusOneName, timestampEST]],
+        values: [[guestName, rsvpResponse || '', plusOneName === "" ? 'TRUE' : 'FALSE', plusOneName, timestampEST]],
       },
     });
 

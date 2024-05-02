@@ -21,7 +21,7 @@ export default function BdayInvite() {
                 <div className={styles.contentContainer}>
                     <div className={styles.cardAndEnvelope}>
                         <div className={styles.envelope}>
-                            <Image alt="envelope" title="envelope" src='/images/envolope.svg' layout="fill" objectFit="contain"  />
+                            <Image alt="envelope" title="envelope" src='/images/envolope.svg' layout="fill" objectFit="contain" />
                         </div>
                         <div className={styles.card}>
                             <div className={styles.cardNameAndGreeting}>
@@ -38,12 +38,13 @@ export default function BdayInvite() {
                     <div className={styles.dressCodeContainer}>
                         <h3 className={styles.dressCodeTitle}> Dress Code: Semi-Formal </h3>
                         <p className={styles.dressCodeCaption}> <i>Elegant Evening Wear Pink, White, and Gold Attire</i></p>
-                        <h4 className={styles.dressCodeDescription}> <b>For Her:</b> Glamorous Evening Attire Cocktail Dresses, or Chic Separates. <br />  <br />
+                        <h4 className={`${styles.dressCodeDescription} ${styles.forHer}`}> <b>For Her:</b> Glamorous Evening Attire Cocktail Dresses, or Chic Separates.</h4>
+                        <h4 className={styles.dressCodeDescription}>
                             <b>For Him:</b> Semi-formal attire. Suits, tuxedos, and ties are not required.</h4>
                     </div>
                     <RsvpForm />
                 </div>
-            </div>
+            </div >
         </>
     );
 }
