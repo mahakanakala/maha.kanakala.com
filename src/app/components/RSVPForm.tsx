@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { useRouter } from 'next/navigation';
 import styles from '../bday.module.css';
 
@@ -16,6 +16,7 @@ const Form = () => {
 
     const [errorMessage, setErrorMessage] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleRsvpResponse = (response: string) => {
         setFormData({ ...formData, rsvpResponse: response });
@@ -29,6 +30,8 @@ const Form = () => {
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        setIsLoading(true);
 
         if (!formData.rsvpResponse) {
             setErrorMessage("RSVP response is required");
@@ -59,10 +62,12 @@ const Form = () => {
             } else {
                 setErrorMessage("Failed to submit RSVP. Please try again.");
             }
+            setIsLoading(false);
         } catch (error) {
             console.error('Error submitting form:', error);
             setErrorMessage("Failed to submit RSVP. Please try again.");
         }
+        setIsLoading(false);
 
     };
 
@@ -86,10 +91,14 @@ const Form = () => {
                     <input className={`${styles.formBtn} ${styles.formNameInput}`} title="name" type="text" name="plusOneName" placeholder="Your plus one's name" value={formData.plusOneName} onChange={handleInputChange} />
                 </div>
             </div>
-
             <div className={styles.submitContainer}>
-                <button className={styles.submitBtn} type="submit">Submit</button>
+                {isLoading ? (
+                    <p className={styles.formLoadingText}>Loading...</p> // Your loading message or spinner here
+                ) : (
+                    <button className={styles.submitBtn} type="submit">Submit</button>
+                )}
             </div>
+
             {errorMessage && <p className={styles.error}>{errorMessage}</p>}
             {isSubmitted && <p className={styles.success}>RSVP submitted!</p>}
         </form >
