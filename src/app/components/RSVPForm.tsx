@@ -93,7 +93,7 @@ const Form = () => {
             </div>
             <div className={styles.submitContainer}>
                 {isLoading ? (
-                    <p className={styles.formLoadingText}>Loading...</p> // Your loading message or spinner here
+                    <p className={styles.formLoadingText}>Loading...</p>
                 ) : (
                     <button className={styles.submitBtn} type="submit">Submit</button>
                 )}
