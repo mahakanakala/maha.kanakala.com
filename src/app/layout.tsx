@@ -1,8 +1,9 @@
 'use client'
 import './globals.css'
 import RestrictRotation from './components/RestrictRotation';
-import Script from 'next/script';
+import { MdMenu } from 'react-icons/md'
 import Footer from './components/Footer'
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,9 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>{children}
-        {/* <nav>
+      <div className="navContainer">
+        <nav>
+        <MdMenu className="menu-icon" />
           <ul>
             <li>
               <Link href="/">Home</Link>
@@ -31,9 +34,10 @@ export default function RootLayout({
               <Link href="/contact">Contact</Link>
             </li> 
           </ul>
-        </nav> */}
+        </nav>
+        </div>
         <RestrictRotation />
-        {/* { <Footer />} */}
+        { <Footer />}
       </body>
     </html>
   )

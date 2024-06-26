@@ -28,51 +28,75 @@
 .headerIntro {
   font-family: "Inter", sans-serif;
   font-weight: 200;
-  font-size: 1.75em;
-  padding-left: 0.5em;
+  font-size: 1.5em;
+  padding-left: 1em;
+  text-transform: uppercase;
 }
 
-.openerName {
-  font-family: "Cormorant-Garamond";
-  font-size: 4em;
-  padding-left: 3em;
-  padding-top: 1.25em;
-  padding-bottom: 0.75em;
-  text-align: center;
+.introAndPicture {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  height: 70vh;
+  overflow: hidden;
+}
+
+.textContainer {
+  float: left;
   width: 50%;
+  box-sizing: border-box;
 }
 
-.nameHeader {
-  font-family: "EB Garamond", serif;
-  color: black;
-  font-size: 2em;
-  position: relative;
-  margin-left: 0;
-}
-
-.nameContainer {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.nameCenter {
-  font-family: "Commuter-Sans";
-  color: black;
-  font-size: 23em;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
+.intro {
+  font-family: Cormorant-Garamond;
+  padding: 0em 0em 0em 1em;
+  font-size: 3.5em;
   text-align: center;
-  margin: 0 auto;
+  text-transform: uppercase;
 }
 
-.subtitle {
-  color: black;
-  font-size: 16px;
-  font-family: "Cormorant Garamound", serif;
-  margin-right: 50px;
+.description {
+  font-family: "Inter", sans-serif;
+  padding: 0em 0em 0em 1em;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.imageContainer {
+  float: right;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr; 
+  grid-template-rows: auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.introTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: .8em; 
+  text-transform: uppercase; 
+  padding-left: 2.5em;
+}
+
+.introTech {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2em; 
+  text-transform: uppercase; 
+}
+
+.experienceDiv {
+
 }
 
 .active {
@@ -108,30 +132,58 @@
 }
 
 .sectionLine {
-  border-top: 0.1em solid black;
+  border-top: 0.07em solid black;
 }
 
 .projectGrid {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 3fr 0.5fr;
-  grid-template-rows: 0.1fr;
+  grid-template-columns: 1.5fr 3fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .sectionTitle {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 2 / 3 / 3;
   font-family: Cormorant-Garamond;
-  font-size: 1.75em;
-  padding: 0.5em;
+  font-size: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   display: flex;
   text-align: left;
-  padding-left: 1em;
+  padding-left: .5em;
   color: black;
 }
 
+.projectTitleAndDescription{
+  display: flex;
+  flex-direction: column;
+}
+
+.projectDescription {
+  padding-left: .5em;
+  padding-bottom: 0.7em;
+  padding-top: 0.3em;
+  text-align: left;
+  font-size: .9em;
+  font-family: "Inter", sans-serif;
+}
+
+.projectImageWrapper {
+  flex-shrink: 0; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.projectImage{
+  max-width: 100%; 
+  height: auto;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
 .projectType {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 3 / 2 / 4;
   font-family: Helvetica;
   padding: 0.5;
   font-size: 0.75em;
@@ -142,7 +194,7 @@
 }
 
 .projectLanguages {
-  grid-area: 1 / 3 / 2 / 4;
+  grid-area: 1 / 4 / 2 / 5;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75em;
   padding: 0.5;
@@ -154,7 +206,7 @@
 }
 
 .projectView {
-  grid-area: 1 / 4 / 2 / 5;
+  grid-area: 1 / 6 / 2 / 7;
   font-family: Cormorant-Garamond;
   font-size: 1.75em;
   display: flex;
@@ -166,7 +218,7 @@
 }
 
 .arrow {
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 7 / 2 / 8;
   text-align: right;
   justify-content: center;
   display: flex;
@@ -183,9 +235,9 @@
 }
 
 .githubIcon {
-  grid-area: 1 / 4 / 2 / 5;
+  grid-area: 1 / 3 / 2 / 5;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 0.5em;
   color: black;
@@ -262,19 +314,8 @@
   }
 }
 
-.projectImageContainer {
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  margin-top: 1em;
-}
-
-@media (max-width: 1700px){ /*desktop*/
-
-}
-
 .projectImage {
-  height: 100vh;
+  /* height: 100vh; */
   position:relative;
   display: block;
 }
@@ -283,5 +324,5 @@
   position: -webkit-sticky;
   position: sticky;
   background-color: #c0c0c0;
-  top:0;
+  top:0;`
 }
