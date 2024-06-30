@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Commuter-Sans";
+  src: url("../../public/fonts/CommutersSans-ExtraLight.ttf") format("opentype");
+  /*optimize font loading and enhance text visibility during the loading process, you can use the font-display CSS property within your @font-face rule. The font-display property determines how a font is displayed based on whether and when it is downloaded and ready to use.
+  find the woff versions of these fonts
+ */
+}
+
+@font-face {
+  font-family: "Cormorant-Garamond";
+  src: url("../../public/fonts/CormorantGaramond-Light.ttf") format("truetype");
+}
+
 html,
 body {
   margin: 0;
@@ -41,7 +54,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
-  font-family: "EB Garamond", serif;
+  font-family: Cormorant-Garamond;
   font-size: 1.5em;
   padding-right: 4.5em;
   padding-left: 4.5em;
@@ -80,7 +93,7 @@ nav ul li a {
 .footerTextYear {
   font-size: 1em;
   color: black;
-  font-family: "Inter", sans-serif;
+  font-family: Commuter-Sans;
   margin: 0 auto;
   padding: 0;
   text-align: right;
