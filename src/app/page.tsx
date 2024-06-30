@@ -22,6 +22,12 @@ export default function Home() {
         
         </div>
       <section>
+      <hr className={styles.sectionLine} />
+            <div className={styles.introGrid}>
+            <div className={styles.introTitle}> Interests </div>
+            <div className={styles.introTech}>DATA ENGINEERING, MACHINE LEARNING, UX/UI </div>
+          </div>
+          <hr className={styles.sectionLine} id="end"/>
       <ExperienceSection/>
         <div className={styles.nameContainer}>
           {/* <div className={styles.videoContainer}>
@@ -31,12 +37,7 @@ export default function Home() {
             </video>
           </div> */}
         </div>
-          <hr className={styles.sectionLine} />
-            <div className={styles.introGrid}>
-            <div className={styles.introTitle}> Interests </div>
-            <div className={styles.introTech}>UX/UI, SWE, LOREM IPSUM, UX/UI, SWE, LOREM IPSUM, </div>
-          </div>
-          <hr className={styles.sectionLine} id="end"/>
+          
       </section>
       <ProjectsSection />
     </>

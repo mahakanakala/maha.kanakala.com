@@ -103,10 +103,10 @@ export default function ProjectsSection() {
               <div className={styles.projectImage}>
             <Image
                     src={project.image}
-                    // fill={true}
+                    fill={true}
                     alt='project picture'
-                    width={260}
-                    height={170}
+                    // width={260}
+                    // height={170}
             />
                 </div>
                 </div>
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
                 </a>
               ) : null}
             </div>
-            <div id='visibleContainer' className={styles.projectView}>VIEW PROJECT</div>
+              <div id='visibleContainer' className={styles.projectView}>  <a href={project.link}> VIEW PROJECT </a> </div>
             <div className={styles.arrow}>
               <a title='project' href={project.link} target="_blank" rel="noopener noreferrer">
                 <BsArrowUpRight />
