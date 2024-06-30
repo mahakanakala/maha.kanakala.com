@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>{children}
-      <div className="navContainer">
+      {/* <div className="navContainer">
         <nav>
         <MdMenu className="menu-icon" />
           <ul>
@@ -32,7 +32,7 @@ export default function RootLayout({
             </li> 
           </ul>
         </nav>
-        </div>
+        </div> */}
         <RestrictRotation />
         { <Footer />}
       </body>
