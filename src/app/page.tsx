@@ -31,14 +31,12 @@ export default function Home() {
             </video>
           </div> */}
         </div>
-        <div className="stickyBar" id="start"> 
           <hr className={styles.sectionLine} />
             <div className={styles.introGrid}>
             <div className={styles.introTitle}> Interests </div>
             <div className={styles.introTech}>UX/UI, SWE, LOREM IPSUM, UX/UI, SWE, LOREM IPSUM, </div>
           </div>
           <hr className={styles.sectionLine} id="end"/>
-          </div>
       </section>
       <ProjectsSection />
     </>

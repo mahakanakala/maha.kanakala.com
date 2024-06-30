@@ -11,7 +11,7 @@ const projectsData = [
   //   title: 'TOXINS IN SKINCARE',
   //   type: 'DATA SCIENCE',
   //   languages: 'PYTHON',
-  //   link: '',
+  //   link: '',-z
   //   github: 'https://github.com/mahakanakala/toxins-in-skincare',
   //   image: '/images/projects/',
   // },
@@ -22,17 +22,17 @@ const projectsData = [
     link: 'https://whats-in-your-skincare.vercel.app/',
     github: 'https://github.com/mahakanakala/skintelligence_website',
     image: '/images/projects/skincare_web_proj.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'This web app allows users to scan their skincare products and see a list of potentially harmful ingredients. By providing transparency around skincare ingredients, the app empowers consumers to make more informed choices.'
   },
-  {
-    title: 'VSCO ANALYZER',
-    type: 'DATA SCIENCE',
-    languages: 'PYTHON',
-    link: 'https://github.com/mahakanakala/vsco_analyzer',
-    github: 'https://github.com/mahakanakala/vsco_analyzer',
-    image: '/images/projects/',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  },
+  // {
+  //   title: 'VSCO ANALYZER',
+  //   type: 'DATA SCIENCE',
+  //   languages: 'PYTHON',
+  //   link: 'https://github.com/mahakanakala/vsco_analyzer',
+  //   github: 'https://github.com/mahakanakala/vsco_analyzer',
+  //   image: '/images/projects/',
+  //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  // },
   {
     title: 'GLOBAL TEMPERATURE TIME FORECASTING MODEL',
     type: 'AI, ML',
@@ -49,7 +49,7 @@ const projectsData = [
     link: 'https://kelp-keep-the-oceans-safe.streamlit.app/',
     github: 'https://github.com/mahakanakala/kelp-keep-the-oceans-safe',
     image: '/images/projects/njit_proj.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'The project is built using Streamlit, Pandas, Folium, Google Cloud Storage, Transformers, and Vertex AI, and aims to inform and engage users by visualizing real-time data about oil spills and garbage patches across the world\'s oceans. Users can report new incidents, interact with a question-answering chatbot, and explore the interactive map interface.'
   },
   {
     title: 'PORTFOLIO TEMPLATE (CS LLC)',
@@ -58,7 +58,7 @@ const projectsData = [
     link: 'https://mahakanakala.github.io/csllc-webtemplate/',
     github: 'https://github.com/mahakanakala/csllc-webtemplate',
     image: '/images/projects/template_proj.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    description: 'This portfolio website template, created as part of the Computer Science LLC, uses HTML and CSS to help beginners showcase their projects, achievements, blog, and photos. With the option to explore popular web frameworks like React, Angular, or Vue.js, the template provides a solid foundation to build an engaging online presence.'
   },
 ];
 

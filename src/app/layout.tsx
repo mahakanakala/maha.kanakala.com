@@ -22,13 +22,10 @@ export default function RootLayout({
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/experience">Experience</Link>
             </li>
              <li>
-              <Link href="/photos">Photos</Link>
+              <Link href="/projects">Projects</Link>
             </li> 
             <li>
               <Link href="/contact">Contact</Link>

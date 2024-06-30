@@ -19,31 +19,25 @@ const experienceData = [
     time: 'May-August 2024',
     position: 'Application Development Intern',
     company: 'Vanguard',
-    link: 'https://whats-in-your-skincare.vercel.app/'
+    link: 'https://investor.vanguard.com/corporate-portal'
   },
   {
-    time: 'May-August 2024',
-    position: 'Application Devleopment Intern',
-    company: 'Vanguard',
-    link: 'https://whats-in-your-skincare.vercel.app/'
+    time: 'May-August 2023',
+    position: 'Data Science Intern',
+    company: 'Amplo Global',
+    link: 'https://amploglobal.com/about-amplo-global/'
   },
   {
-    time: 'May-August 2024',
-    position: 'Application Devleopment Intern',
-    company: 'Vanguard',
-    link: 'https://whats-in-your-skincare.vercel.app/'
+    time: 'May-August 2022',
+    position: 'Software Engineering Intern',
+    company: 'Zenith Services',
+    link: 'https://zenithcad.com/'
   },
   {
-    time: 'May-August 2024',
-    position: 'Application Devleopment Intern',
-    company: 'Vanguard',
-    link: 'https://whats-in-your-skincare.vercel.app/'
-  },
-  {
-    time: 'May-August 2024',
-    position: 'Application Devleopment Intern',
-    company: 'Vanguard',
-    link: 'https://whats-in-your-skincare.vercel.app/'
+    time: 'December-January 2022',
+    position: 'UX Design Extern',
+    company: 'Microsoft',
+    link: 'https://leap.microsoft.com/en-US/pathways/design/user-experience-designer/'
   },
 ];
 
@@ -80,22 +74,27 @@ export default function ExperienceSection() {
   // 1 box will have the time
   // 2 box will have the position and company (with interactive Link)
   return (
-    <div className={styles.projectsContainer}>
-      <h2 className={styles.projectsTitle}>Experience</h2>
-      {experienceData.map((experience, index) => (
-        <section key={index}>
-            <div className={styles.experienceDiv}>
-              <div className={styles.experienceYear}>
-                
+    <div className={styles.experienceContainer}>
+      <div className={styles.experienceTitle}>EXPERIENCE</div>
+      <div className={styles.experiences}>
+        {experienceData.map((exp, index) => (
+          <div key={index} className={styles.experience}>
+            <div className={styles.details}>
+              <div className={styles.time}>{exp.time}</div>
+              <div className={styles.rightDetails}>
+                <div className={styles.positionAndCompany}>
+                  <div className={styles.position}>{exp.position}</div>
+                  <div className={styles.company}>
+                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      {exp.company}
+                    </a>
                   </div>
-              <div className={styles.experiencePosition}>
-                
-                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          {/* <hr className={styles.sectionLine} id="end"/> */}
-        </section>
-      ))}
-      <hr className={styles.sectionLine} />
+        ))}
+      </div>
     </div>
   );
 }
